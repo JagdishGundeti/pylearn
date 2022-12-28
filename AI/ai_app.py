@@ -1,4 +1,5 @@
 import requests
+import csv
 from bs4 import BeautifulSoup
 
 # Set the URL of the page you want to scrape
@@ -13,16 +14,24 @@ soup = BeautifulSoup(response.text, "html.parser")
 # Find all the div elements with the class "product_pod"
 products = soup.find_all("article", class_="product_pod")
 
-# Iterate through the products and extract the data we want
-for product in products:
-    # Find the title element and extract the text
-    title = product.h3.a.text
+# Open a CSV file for writing
+with open("books.csv", "w", newline="") as csvfile:
+    # Create a CSV writer object
+    writer = csv.writer(csvfile)
 
-    # Find the price element and extract the text
-    price = product.find("p", class_="price_color").text
+    # Write the headers to the CSV file
+    writer.writerow(["Title", "Price", "Link"])
 
-    # Find the link element and extract the URL
-    link = product.h3.a["href"]
+    # Iterate through the products and extract the data we want
+    for product in products:
+        # Find the title element and extract the text
+        title = product.h3.a.text
 
-    # Print the data
-    print(f"Title: {title}\nPrice: {price}\nLink: {link}\n---")
+        # Find the price element and extract the text
+        price = product.find("p", class_="price_color").text
+
+        # Find the link element and extract the URL
+        link = product.h3.a["href"]
+
+        # Write the data to the CSV file
+        writer.writerow([title, price, link])
