@@ -15,7 +15,7 @@ soup = BeautifulSoup(response.text, "html.parser")
 products = soup.find_all("article", class_="product_pod")
 
 # Open a CSV file for writing
-with open("books.csv", "w", newline="") as csvfile:
+with open("books.csv", "w", newline="", encoding="utf-8") as csvfile:
     # Create a CSV writer object
     writer = csv.writer(csvfile)
 
