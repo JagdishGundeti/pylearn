@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
-{% block title %}Absense User List{% endblock title %}
-{% block breadcrumb %}Absense User List{% endblock breadcrumb %}
+{% block title %}{{ build_page_title }}{% endblock title %}
+{% block breadcrumb %}{{ build_page_title }}{% endblock breadcrumb %}
 
 {% block content %}
     <div class="row">
@@ -9,7 +9,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-10">
-                            <h5>Liste d'absence</h5>
+                            <h5>{{ build_page_title }}</h5>
                         </div>
                         <div class="col-md-2">
                             <a class="btn btn-success" href="{% url 'event-create' %}">Create Event</a>
@@ -21,18 +21,18 @@
                         <thead>                  
                           <tr>
                             <th style="width: 10px">#</th>
-                            <th>User</th>
-                            <th>Event</th>
-                            <th>Status</th>
+                            <th>Name</th>
+                            <th>Categorie</th>
                           </tr>
                         </thead>
                         <tbody>
-                            {% for absenseuser in absenseuser %}
+                            {% for event in events %}
                                 <tr role="row">
                                     <td>{{ forloop.counter }}</td>
-                                    <td>{{ absenseuser.user }}</td>
-                                    <td>{{ absenseuser.event }}</td>
-                                    <td>{{ absenseuser.status }}</td>
+                                    <td>
+                                        <a href="{% url 'event-detail' event.id %}">{{ event.name }}</a>
+                                    </td>
+                                    <td>{{ event.category }}</td>
                                 </tr>
                             {% endfor %}
                         </tbody>

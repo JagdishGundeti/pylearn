@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'events.Employee'
 
 # Application definition
 
@@ -85,13 +86,42 @@ WSGI_APPLICATION = 'event_management.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 # Sqlite config 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+"""
 
+
+DATABASES = {
+
+    'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'OPTIONS': {
+                # 'options': '-c search_path=smaran,django,public'
+                'options': '-c search_path=smaran'
+            },
+            'HOST': '172.11.1.111',
+            'NAME': 'DB_NAME',
+            'USER': 'USER_ID',
+            'PASSWORD': 'USER_PASSWORD',
+    },
+    'smaran': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'OPTIONS': {
+                # 'options': '-c search_path=smaran,django,public'
+                'options': '-c search_path=smaran'
+            },
+            'HOST': '172.11.1.111',
+            'NAME': 'DB_NAME',
+            'USER': 'USER_ID',
+            'PASSWORD': 'USER_PASSWORD',
+    },
+
+}
 # Mongodb config
 # DATABASES = {
 #        'default': {
@@ -105,7 +135,9 @@ DATABASES = {
 #             }
 #        }
 #    }
-
+AUTHENTICATION_BACKENDS = (
+    ('django.contrib.auth.backends.ModelBackend'),
+)
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -136,7 +168,8 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+#Fixed by below for error => AssertionError: database connection isn't set to UTC
+#USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -164,3 +197,10 @@ CKEDITOR_CONFIGS = {
         'toolbar': None,
     },
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gmail@rajnikanth.com'
+EMAIL_HOST_PASSWORD = 'myway'

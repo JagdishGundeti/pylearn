@@ -16,7 +16,7 @@
           <img src="{% static 'img/user.jpg' %}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">El Bakkouri Mohammed Amine</a>
+          <a href="#" class="d-block">{{ user_login_name }}</a>
         </div>
       </div>
 
@@ -56,6 +56,8 @@
               </li>
             </ul>
           </li>
+
+
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-calendar"></i>
@@ -102,12 +104,6 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'complete-event' %}" class="nav-link">
-                  <i class="far fa fa-list nav-icon"></i>
-                  <p>Complete Event List</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="{% url 'absense-user' %}" class="nav-link">
                   <i class="far fa fa-list nav-icon"></i>
                   <p>Absense User</p>
@@ -129,6 +125,71 @@
                 <a href="{% url 'user-mark' %}" class="nav-link">
                   <i class="far fa fa-list nav-icon"></i>
                   <p>User Mark List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-folder"></i>
+              <p>
+                Event Status
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'complete-event' %}" class="nav-link">
+                  <i class="far fa fa-list nav-icon"></i>
+                  <p>Complete Event List</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'active-event' %}" class="nav-link">
+                  <i class="far fa fa-list nav-icon"></i>
+                  <p>Active Event List</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'event-end-date-reached-but-active' %}" class="nav-link">
+                  <i class="far fa fa-list nav-icon"></i>
+                  <p>Event End Reached But Active</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'active-event-of-today' %}" class="nav-link">
+                  <i class="far fa fa-list nav-icon"></i>
+                  <p>Active Events Of Today</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-folder"></i>
+              <p>
+                Job Category
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'create-job-category' %}" class="nav-link">
+                  <i class="far fa fa-edit nav-icon"></i>
+                  <p>Create Job Category</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'job-category-list' %}" class="nav-link">
+                  <i class="far fa fa-list nav-icon"></i>
+                  <p>Job Category List</p>
                 </a>
               </li>
             </ul>

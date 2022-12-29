@@ -25,13 +25,30 @@ from .views import (
     search_event_category,
     search_event,
     create_event,
+    JobCategoryListView,
+    JobCategoryCreateView,
+    JobCategoryUpdateView,
+    JobCategoryDeleteView,
+    ActiveEventList,
+    EventEndReachedButActive,
+    ActiveEventOfTodayList,
+    OpenMessageNotification,
+    
+
 )
 
 urlpatterns = [
     path('category-list/', EventCategoryListView.as_view(), name='event-category-list'),
     path('create-category/', EventCategoryCreateView.as_view(), name='create-event-category'),
+    path('job-category-list/', JobCategoryListView.as_view(), name='job-category-list'),
+    path('create-jobcategory/', JobCategoryCreateView.as_view(), name='create-job-category'),
+
     path('category/<int:pk>/edit/', EventCategoryUpdateView.as_view(), name='edit-event-category'),
     path('category/<int:pk>/delete/', EventCategoryDeleteView.as_view(), name='delete-event-category'),
+
+    path('job-category/<int:pk>/edit/', JobCategoryUpdateView.as_view(), name='edit-job-category'),
+    path('job-category/<int:pk>/delete/', JobCategoryDeleteView.as_view(), name='delete-job-category'),
+
     path('event-create/', EventCreateView.as_view(), name='event-create'),
     path('event-list/', EventListView.as_view(), name='event-list'),
     path('event/<int:pk>/edit/', EventUpdateView.as_view(), name='event-edit'),
@@ -45,6 +62,9 @@ urlpatterns = [
     path('event-user-wish/<int:pk>/remove/', RemoveEventUserWishDeleteView.as_view(), name='remove-event-user-wish'),
     path('update-status/<int:pk>/event/', UpdateEventStatusView.as_view(), name='update-event-status'),
     path('complete-event/', CompleteEventList.as_view(), name='complete-event'),
+    path('active-event/', ActiveEventList.as_view(), name='active-event'),
+    path('event-end-date-reached-but-active/', EventEndReachedButActive.as_view(), name='event-end-date-reached-but-active'),
+    path('active-event-of-today/', ActiveEventOfTodayList.as_view(), name='active-event-of-today'),
     path('absense-user/', AbsenseUserList.as_view(), name='absense-user'),
     path('complete-event-user/', CompleteEventUserList.as_view(), name='complete-event-user'),
     path('create-user-mark/', CreateUserMark.as_view(), name='create-user-mark'),
@@ -52,4 +72,5 @@ urlpatterns = [
     path('search_category/', search_event_category, name='search-event-category'),
     path('search_event/', search_event, name='search-event'),
     path('create/', create_event, name='create'),
+    path('open-message-notification/', OpenMessageNotification.as_view(), name='open-message-notification'),
 ]

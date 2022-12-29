@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
-{% block title %}Event List{% endblock title %}
-{% block breadcrumb %}Event List{% endblock breadcrumb %}
+{% block title %}Event Category List{% endblock title %}
+{% block breadcrumb %}Event Category List{% endblock breadcrumb %}
 
 {% block content %}
     <div class="row">
@@ -9,11 +9,11 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-5">
-                            <h5>Event List</h5>
+                            <h5>Event Category List</h5>
                         </div>
                         <div class="col-md-7">
                             <div class="row">
-                                <form class="form-inline ml-3" action="{% url 'search-event' %}" method="POST">
+                                <form class="form-inline ml-3" action="{% url 'search-event-category' %}" method="POST">
                                     {% csrf_token %}
                                     <div class="input-group input-group-sm">
                                       <input class="form-control form-control-navbar" name="search" type="search" placeholder="Search" aria-label="Search">
@@ -26,7 +26,7 @@
                                   </form>
                                 <a class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</a> 
                                 <a class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</a>
-                                <a class="btn btn-success" href="{% url 'event-create' %}">Create New Event</a>
+                                <a class="btn btn-success" href="{% url 'create-event-category' %}">Create New Category</a>
                             </div>
                         </div>
                     </div>
@@ -37,38 +37,19 @@
                             <tr role="row">
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>Category</th>
-                                <th class="event_image">Image</th>
-                                <th>Status</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {% for event in events %}
+                            {% for category in job_category %}
                               <tr>
                                   <td>{{ forloop.counter }}</td>
-                                  <td>{{ event.name }}</td>
-                                  <td>{{ event.category }}</td>
-                                  <td class="event_image">
-                                      <img class="event_image" src="{{ event.eventimage.image.url }}" alt="Image" height="64px" width="64px">
-                                  </td>
+                                  <td>{{ category.name }}</td>
                                   <td>
-                                      {% if event.status == 'active' %}
-                                        <a href="{% url 'update-event-status' event.id %}" class="text-success">{{ event.status|title }}</a>
-                                      {% elif event.status == 'completed' %}
-                                        <a href="{% url 'update-event-status' event.id %}" class="text-primary">{{ event.status|title }}</a>
-                                      {% else %}
-                                        <a href="{% url 'update-event-status' event.id %}" class="text-danger">{{ event.status|title }}</a>
-                                      {% endif %}
-                                  </td>
-                                  <td>
-                                      <a class="btn btn-info" href="{% url 'event-detail' event.pk %}" title="view">
-                                          <i class="fa fa-eye"></i>
+                                      <a class="btn btn-info" href="{% url 'edit-job-category' category.pk %}">
+                                          <i class="fa fa-edit"></i>
                                       </a>
-                                      <a class="btn btn-info" href="{% url 'event-edit' event.pk %}" title="edit">
-                                        <i class="fa fa-edit"></i>
-                                    </a>
-                                      <a class="btn btn-danger" href="{% url 'event-delete' event.pk %}" title="delete">
+                                      <a class="btn btn-danger" href="{% url 'delete-job-category' category.pk %}">
                                           <i class="fa fa-trash"></i>
                                       </a>
                                   </td>
@@ -86,7 +67,7 @@
 <script>
     // Get the elements with class="column"
     var elements = document.getElementsByClassName("table");
-    var myobj = document.getElementsByClassName("event_image");
+    var myobj = document.getElementsByClassName("ctg_image");
     // Declare a loop variable
     var i;
 
@@ -94,7 +75,7 @@
     function listView() {
         for (i = 0; i < elements.length; i++) {
 
-            var appBanners = document.getElementsByClassName('event_image');
+            var appBanners = document.getElementsByClassName('ctg_image');
 
             for (var i = 0; i < appBanners.length; i ++) {
                 appBanners[i].style.display = 'none';
@@ -105,7 +86,7 @@
     // Grid View
     function gridView() {
       for (i = 0; i < elements.length; i++) {
-        var appBanners = document.getElementsByClassName('event_image');
+        var appBanners = document.getElementsByClassName('ctg_image');
 
         for (var i = 0; i < appBanners.length; i ++) {
             appBanners[i].style.display = 'block';

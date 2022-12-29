@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
-{% block title %}Add Event Member{% endblock title %}
-{% block breadcrumb %}Add Event Member{% endblock breadcrumb %}
+{% block title %}Edit Event Category{% endblock title %}
+{% block breadcrumb %}Edit Event Category{% endblock breadcrumb %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -10,18 +10,18 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-10">
-                            <h5>Add member to the event</h5>
+                            <h5>Edit Event Category</h5>
                         </div>
                         <div class="col-md-2">
-                            <a class="btn btn-success" href="{% url 'join-event-list' %}">Add to list</a>
+                            <a class="btn btn-success" href="{% url 'event-category-list' %}">Category List</a>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form method="post">
+                    <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form|crispy  }}
-                        <button class="btn btn-success ml-2" type="submit">Add member</button>
+                        <button class="btn btn-success ml-2" type="submit">Update</button>
                     </form>
                 </div>
             </div>
