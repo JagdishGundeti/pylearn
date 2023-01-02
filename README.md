@@ -16,6 +16,9 @@ It involves project and tutorial forDJango, Flask, Web scraping.
  - [CodeTrading](https://www.youtube.com/@CodeTradingCafe)
  - [Sajib Hossain](https://github.com/sajib1066/django-event-management)
  - [CodeWithHarry](https://www.youtube.com/@CodeWithHarry)
+ - [Pythonist](https://www.youtube.com/@Pythonist)
+ - [Pythonist-URL]( https://pythonist.org/)
+
 
 
 # pylearn
@@ -42,15 +45,19 @@ django-event-management\README.md
 
 [sajib1066](https://github.com/sajib1066/django-event-management)
 
-
+ 
 # flask
 
 flask_tutorial\tutorial_1.py
 
-[codewithharry](https://www.youtube.com/watch?v=DD3ou9sa3Z8&list=PLu0W_9lII9agAiWp6Y41ueUKx1VcTRxmf&index=1)
+[codewithharry-YT](https://www.youtube.com/watch?v=DD3ou9sa3Z8&list=PLu0W_9lII9agAiWp6Y41ueUKx1VcTRxmf&index=1)
 
-[codewithharry](https://www.codewithharry.com/videos/web-dev-using-flask-and-python-3/)
+[codewithharry-URL](https://www.codewithharry.com/videos/web-dev-using-flask-and-python-3/)
 
+
+flask_api_tutorial\
+
+[Pythonist](https://www.youtube.com/watch?v=F7AK-WzpYdY&list=PLMOobVGrchXN5tKYdyx-d2OwwgxJuqDVH&index=1)
 
 # Readme Editor
 
