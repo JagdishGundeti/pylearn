@@ -27,17 +27,25 @@ AI\ai_app.py
 
 
 Trade\LSTM_CodeTrading_1.ipynb
-CodeTrading => "Recurrent Neural Networks | LSTM Price Movement Predictions For Trading Algorithms"
-link => https://www.youtube.com/watch?v=hpfQE0bTeA4&t=600s
+
+[CodeTrading](https://www.youtube.com/watch?v=hpfQE0bTeA4&t=600s)
+
+"Recurrent Neural Networks | LSTM Price Movement Predictions For Trading Algorithms"
+
 
 django-event-management\README.md
-link => https://github.com/sajib1066/django-event-management
+
+[sajib1066](https://github.com/sajib1066/django-event-management)
+
 
 
 flask_tutorial\tutorial_1.py
-link => https://www.youtube.com/watch?v=DD3ou9sa3Z8&list=PLu0W_9lII9agAiWp6Y41ueUKx1VcTRxmf&index=1
-        https://www.codewithharry.com/videos/web-dev-using-flask-and-python-3/
 
+[codewithharry](https://www.youtube.com/watch?v=DD3ou9sa3Z8&list=PLu0W_9lII9agAiWp6Y41ueUKx1VcTRxmf&index=1)
 
+[codewithharry](https://www.codewithharry.com/videos/web-dev-using-flask-and-python-3/)
 
-https://readme.so/editor
+readme editor
+
+[readme editor](https://readme.so/editor)
+
