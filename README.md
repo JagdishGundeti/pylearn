@@ -19,9 +19,12 @@ It involves project and tutorial forDJango, Flask, Web scraping.
 
 
 # pylearn
+
 AI\ai_app.py
-"LeetCode Solutions" => "Web Scraping Using ChatGPT #openai #chatgpt #webscraping"
-link => https://www.youtube.com/watch?v=Uns1ajNmCts
+
+ 
+[AI generated code](https://chat.openai.com/chat)
+
 
 Trade\LSTM_CodeTrading_1.ipynb
 CodeTrading => "Recurrent Neural Networks | LSTM Price Movement Predictions For Trading Algorithms"
