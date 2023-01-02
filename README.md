@@ -20,11 +20,14 @@ It involves project and tutorial forDJango, Flask, Web scraping.
 
 # pylearn
 
+# AI generated
+
 AI\ai_app.py
 
  
 [AI generated code](https://chat.openai.com/chat)
 
+# Trade
 
 Trade\LSTM_CodeTrading_1.ipynb
 
@@ -33,11 +36,14 @@ Trade\LSTM_CodeTrading_1.ipynb
 "Recurrent Neural Networks | LSTM Price Movement Predictions For Trading Algorithms"
 
 
+# django
+
 django-event-management\README.md
 
 [sajib1066](https://github.com/sajib1066/django-event-management)
 
 
+# flask
 
 flask_tutorial\tutorial_1.py
 
@@ -45,7 +51,8 @@ flask_tutorial\tutorial_1.py
 
 [codewithharry](https://www.codewithharry.com/videos/web-dev-using-flask-and-python-3/)
 
-readme editor
+
+# Readme Editor
 
 [readme editor](https://readme.so/editor)
 
