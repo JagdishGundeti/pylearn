@@ -59,6 +59,14 @@ flask_api_tutorial\
 
 [Pythonist](https://www.youtube.com/watch?v=F7AK-WzpYdY&list=PLMOobVGrchXN5tKYdyx-d2OwwgxJuqDVH&index=1)
 
+Operations =>
+
+    In Memory 
+
+    Sqlite
+
+    MySQL
+
 # Readme Editor
 
 [readme editor](https://readme.so/editor)
