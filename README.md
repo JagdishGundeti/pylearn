@@ -67,6 +67,15 @@ Operations =>
 
     MySQL
 
+# AIML
+
+AIML\sales_forecast.ipynb
+[ML-URL](https://thecleverprogrammer.com/2022/03/01/future-sales-prediction-with-machine-learning/)
+
+AIML\forecasting-future-sales-using-machine-learning.ipynb
+[ML-URL](https://www.kaggle.com/code/badl071/forecasting-future-sales-using-machine-learning/data)
+
+
 # Readme Editor
 
 [readme editor](https://readme.so/editor)
