@@ -17,7 +17,8 @@ It involves project and tutorial forDJango, Flask, Web scraping.
  - [Sajib Hossain](https://github.com/sajib1066/django-event-management)
  - [CodeWithHarry](https://www.youtube.com/@CodeWithHarry)
  - [Pythonist](https://www.youtube.com/@Pythonist)
- - [Pythonist-URL]( https://pythonist.org/)
+ - [Pythonist-URL](https://pythonist.org/)
+ - [tutorialspoint-python](https://www.tutorialspoint.com/python/index.htm)
 
 
 
